@@ -1,0 +1,1 @@
+select a.id_mk, c.nama_mk,c.sks,a.bentuk,a.kelas,a.kuliah,a.terstruktur,b.nama, (select b.nama from p_awal a, dosen b where a.asisten = b.nid) as asisten, a.`blended learning`,a.`status` from p_awal a,  dosen b, matakuliah c where a.id_mk = c.id_mk and a.nid = b.nid;
